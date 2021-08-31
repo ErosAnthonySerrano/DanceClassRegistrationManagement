@@ -10,7 +10,7 @@
     </div>
 <div class="row" align="left">
     <div class="pull-right">
-        <a class="btn btn-success" href="{{ route('student.create')}}">New Student</a>
+        <a class="btn btn-success" href="{{ route('danceclass.create')}}">New Student</a>
     </div>
 </div>
 
@@ -27,7 +27,7 @@
         <th>Age</th>
         <th>Type of Dance</th>
         <th>Level of Dance</th>
-        <th width="280px">Action</th>
+        <th>Option</th>
     </tr>
 
     @foreach ($dcstudents as $dcstudent)
@@ -47,3 +47,6 @@
         </td>
     </tr>
     @endforeach
+    </table>
+
+    @endsection
