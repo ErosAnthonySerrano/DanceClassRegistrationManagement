@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('design')
 
 @section('content')
     <div class="row">
@@ -10,7 +10,7 @@
     </div>
 <div class="row" align="left">
     <div class="pull-right">
-       
+       <a class="btn btn-success" href="{{ route('dclass.create')}}">New Dancer</a>
     </div>
 </div>
 
