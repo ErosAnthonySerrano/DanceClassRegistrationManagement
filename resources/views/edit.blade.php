@@ -35,18 +35,30 @@
         <div class="left">
             <strong>Age</strong>
             <input class="form-control" name="age" value="{{ $danceclass->age }}" placeholder="Age">
+</br>
         </div>
         <div class="left">
-            <strong>Type of Dance</strong>
-            <input class="form-control" name="typeofdance" value="{{ $danceclass->typeofdance }}" placeholder="TypeOfDance">
+        <strong for="typeofdance">Type of Dance</strong>
+                        <select name="typeofdance" id="typeofdance">
+                            <option value="Hip-Hop">Hip-Hop</option>
+                            <option value="Urban Dance">Urban Dance</option>
+                            <option value="Popping">Popping</option>
+                        </select>
+                        </br></br>
         </div>
         <div class="left">
-            <strong>Level of Dance</strong>
-            <input class="form-control" name="levelofdance" value="{{ $danceclass->levelofdance }}" placeholder="LevelOfDance">
+        <strong for="levelofdance">Type of Dance</strong>
+                        <select name="levelofdance" id="levelofdance">
+                            <option value="Advance">Advance</option>
+                            <option value="Average">Average</option>
+                            <option value="Beginner">Beginner</option>
+                        </select>
+                        </br></br>
         </div>
         <div class="left">
             <strong>Contact Number</strong>
             <input class="form-control" name="contactnumber" value="{{ $danceclass->contactnumber }}" placeholder="ContactNumber">
+            </br>
         </div>
         <div class="left">
             <button type="submit" class="btn btn-primary">Submit</button>

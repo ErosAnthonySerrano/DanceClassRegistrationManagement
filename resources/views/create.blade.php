@@ -34,18 +34,30 @@
                     <div class="left">
                         <strong>Age</strong>
                         <input class="form-control" name="age" placeholder="Age"></textarea>
+                        </br>
 </div>
                     <div class="left">
-                        <strong>Type of Dance</strong>
-                        <input class="form-control" name="typeofdance" placeholder="TypeOfDance"></textarea>
+                        <strong for="typeofdance">Type of Dance</strong>
+                        <select name="typeofdance" id="typeofdance">
+                            <option value="Hip-Hop">Hip-Hop</option>
+                            <option value="Urban Dance">Urban Dance</option>
+                            <option value="Popping">Popping</option>
+                        </select></textarea>
+                        </br></br>
 </div>
                     <div class="left">
-                        <strong>Level of Dance</strong>
-                        <input class="form-control" name="levelofdance" placeholder="LevelOfDance"></textarea>
+                        <strong for="levelofdance">Level of Dance</strong>
+                        <select name="levelofdance" id="levelofdance">
+                            <option value="Advance">Advance</option>
+                            <option value="Average">Average</option>
+                            <option value="Beginner">Beginner</option>
+                        </select></textarea>
+                        </br></br>
 </div>
                     <div class="left">
                         <strong>Contact Number</strong>
                         <input class="form-control" name="contactnumber" placeholder="ContactNumber"></textarea>
+                        </br>
 </div>
 
     <div class="left">
