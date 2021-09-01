@@ -13,4 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'DanceClassController@index');
+Route::get('/', 'DanceClassController@index')->name('dclass.index');
+Route::get('/danceclassstudent', 'DanceClassController@create')->name('dclass.create');
+Route::post('/danceclassstudent', 'DanceClassController@store')->name('dclass.store');

@@ -11,4 +11,17 @@ class DanceClassController extends Controller
         
         return view('index', compact('danceclass','danceclass'));
     }
+
+    public function create()
+    {
+        return view('create');
+    }
+    
+    public function store(Request $request){
+        
+        dclass::create(['name' => $request->name, 'age' => $request->age, 'typeofdance' => $request->typeofdance, 'levelofdance' => $request->levelofdance]);
+        return redirect()->route('dclass.index')->withSuccess('New Dancer has been added');
+
+    }
+
 }

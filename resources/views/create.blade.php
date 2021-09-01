@@ -1,4 +1,4 @@
-@extends ('design')
+@extends('design')
 
 @section('content')
 <div class="row">
@@ -22,7 +22,7 @@
 @endif
 
     <div class="row">
-        <form action="{{ route(dclass.store) }}" method="POST">
+        <form action="{{ route('dclass.store') }}" method="POST">
             @csrf
                 <div class="col-sm-4">
 
