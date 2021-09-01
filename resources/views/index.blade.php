@@ -1,4 +1,4 @@
-@extends('design')
+@extends('layout')
 
 @section('content')
     <div class="row">
@@ -10,7 +10,7 @@
     </div>
 <div class="row" align="left">
     <div class="pull-right">
-        <a class="btn btn-success" href="{{ route('danceclass.create')}}">New Student</a>
+       
     </div>
 </div>
 
@@ -30,21 +30,14 @@
         <th>Option</th>
     </tr>
 
-    @foreach ($dcstudents as $dcstudent)
+    @foreach ($danceclass as $dclass)
     <tr>
-        <td>{{ $dcstudent->id }}</td>
-        <td>{{ $dcstudent->name }}</td>
-        <td>{{ $dcstudent->age }}</td>
-        <td>{{ $dcstudent->typeofdance }}</td>
-        <td>{{ $dcstudent->levelofdance }}</td>
-        <td>
-            <form method="POST" action=" {{ route('dcstudent.destroy',$dcstudent->id) }}">
-                <a class="btn btn-primary" href="{{ route('dcstudent.edit',$dcstudent->id) }}">Edit</a>
-                {{ csrf_field() }}
-                {{ method_field('DELETE') }}
-                    <input type="submit" class="btn btn-danger delete-user" value="Delete">
-            </form>
-        </td>
+        <td>{{ $dclass->id }}</td>
+        <td>{{ $dclass->name }}</td>
+        <td>{{ $dclass->age }}</td>
+        <td>{{ $dclass->typeofdance }}</td>
+        <td>{{ $dclass->levelofdance }}</td>
+        
     </tr>
     @endforeach
     </table>
