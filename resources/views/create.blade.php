@@ -43,6 +43,10 @@
                         <strong>Level of Dance</strong>
                         <input class="form-control" name="levelofdance" placeholder="LevelOfDance"></textarea>
 </div>
+                    <div class="left">
+                        <strong>Contact Number</strong>
+                        <input class="form-control" name="contactnumber" placeholder="ContactNumber"></textarea>
+</div>
 
     <div class="left">
         <button type="submit" class="btn btn-primary">Submit</button>

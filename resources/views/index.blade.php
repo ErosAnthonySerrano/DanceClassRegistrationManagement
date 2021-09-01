@@ -27,6 +27,7 @@
         <th>Age</th>
         <th>Type of Dance</th>
         <th>Level of Dance</th>
+        <th>Contact Number</th>
         <th>Option</th>
     </tr>
 
@@ -37,7 +38,15 @@
         <td>{{ $dclass->age }}</td>
         <td>{{ $dclass->typeofdance }}</td>
         <td>{{ $dclass->levelofdance }}</td>
-        
+        <td>{{ $dclass->contactnumber }}</td>
+        <td>
+            <form method="POST" action=" {{ route('dclass.destroy', $dclass->id) }}">
+                <a class="btn btn-primary" href="{{ route('dclass.edit', $dclass->id) }}">Update</a>
+                {{ csrf_field() }}
+                {{ method_field('DELETE') }}
+                    <input type="submit" class="btn btn-danger delete-user" value="Delete">
+</form>
+</td>
     </tr>
     @endforeach
     </table>

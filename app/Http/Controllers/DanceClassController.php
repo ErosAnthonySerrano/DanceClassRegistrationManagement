@@ -19,9 +19,27 @@ class DanceClassController extends Controller
     
     public function store(Request $request){
         
-        dclass::create(['name' => $request->name, 'age' => $request->age, 'typeofdance' => $request->typeofdance, 'levelofdance' => $request->levelofdance]);
-        return redirect()->route('dclass.index')->withSuccess('New Dancer has been added');
+        DanceClassStudent::create(['name' => $request->name, 'age' => $request->age, 'typeofdance' => $request->typeofdance, 'levelofdance' => $request->levelofdance, 'contactnumber' => $request->contactnumber]);
+        return redirect()->route('dclass.index')->with('success','New Dancer has been added');
 
     }
+
+    public function edit(DanceClassStudent $danceclass){
+        return view('edit')->with("danceclass",$danceclass);
+    }
+
+
+     public function update(Request $request, DanceClassStudent $danceclass){
+         $danceclass->update(['name' => $request->name, 'age' => $request->age, 'typeofdance' => $request->typeofdance, 'levelofdance' => $request->levelofdance, 'contactnumber' => $request->contactnumber, 'created_at' => now()]);
+         return redirect()->route('dclass.index')->with('success','Dancer Info has been Updated!');
+     }
+     
+
+     public function destroy(DanceClassStudent $danceclass){
+
+        $danceclass->delete();
+        return redirect()->route('dclass.index')->with('success','Dancer Info has been Deleted!');
+
+     }
 
 }
