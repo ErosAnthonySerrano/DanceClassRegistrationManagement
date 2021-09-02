@@ -20,7 +20,8 @@ class DanceClassController extends Controller
     public function store(Request $request){
         
         DanceClassStudent::create(['name' => $request->name, 'age' => $request->age, 'typeofdance' => $request->typeofdance, 'levelofdance' => $request->levelofdance, 'contactnumber' => $request->contactnumber]);
-        return redirect()->route('dclass.index')->with('success','New Dancer has been added');
+     
+        return redirect()->route('dclass.index')->with('success', 'New Dancer has been added');
 
     }
 
@@ -34,12 +35,15 @@ class DanceClassController extends Controller
          return redirect()->route('dclass.index')->with('success','Dancer Info has been Updated!');
      }
      
-
      public function destroy(DanceClassStudent $danceclass){
-
+         
+        
         $danceclass->delete();
         return redirect()->route('dclass.index')->with('success','Dancer Info has been Deleted!');
+        
 
      }
+    
+ 
 
 }
