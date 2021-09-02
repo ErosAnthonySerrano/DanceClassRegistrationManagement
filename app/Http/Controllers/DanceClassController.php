@@ -43,6 +43,8 @@ class DanceClassController extends Controller
         
 
      }
+
+     
     
  
 

@@ -19,4 +19,5 @@ Route::post('/danceclassstudent', 'DanceClassController@store')->name('dclass.st
 Route::get('/danceclassstudent/{danceclass}', 'DanceClassController@edit')->name('dclass.edit');
 Route::post('/danceclassstudent/{danceclass}', 'DanceClassController@update')->name('dclass.update');
 Route::delete('/danceclassstudent/{danceclass}', 'DanceClassController@destroy')->name('dclass.destroy');
+
 Route::post('/', 'DanceClassController@index')->name('dclass.index');

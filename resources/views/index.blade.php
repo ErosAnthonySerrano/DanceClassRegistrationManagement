@@ -2,6 +2,8 @@
 
 @section('content')
 </br>
+<div style='border:white; border-style:groove; border-width:8px'>
+
     <div class="row" style='background-color:red' align="center">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
@@ -24,8 +26,8 @@
 @endif
 
 <table class="table table-striped" style='background-color:black'>
-    <tr style='color:white'>
-        <th >No</th>
+    <tr style='color:black; background-color:white' align="center">
+        <th >ID</th>
         <th>Name</th>
         <th>Age</th>
         <th>Type of Dance</th>
@@ -35,7 +37,7 @@
     </tr>
 
     @foreach ($danceclass as $dclass)
-    <tr style='color:white'>
+    <tr style='color:white' align="center">
         <td>{{ $dclass->id }}</td>
         <td>{{ $dclass->name }}</td>
         <td>{{ $dclass->age }}</td>
@@ -43,14 +45,18 @@
         <td>{{ $dclass->levelofdance }}</td>
         <td>{{ $dclass->contactnumber }}</td>
         <td>
-            <form method="POST" action=" {{ route('dclass.destroy', $dclass->id) }}">
-                <a class="btn btn-primary" href="{{ route('dclass.edit', $dclass->id) }}" style='background-color:yellow; color:black'>Update</a>
-                {{ csrf_field() }}
+
+        <form method="POST" action=" {{ route('dclass.destroy', $dclass->id) }}">
+        <a class="btn btn-primary" href="{{ route('dclass.edit', $dclass->id) }}" style='background-color:yellow; color:black'>Update</a>
+				{{ csrf_field() }}
                 {{ method_field('DELETE') }}
                     <input type="submit" class="btn btn-danger delete-user" value="Delete" style='color:white; background-color:red'>
 </form>
+               
 </td>
+
     </tr>
     @endforeach
     </table>
+</div>
     @endsection
