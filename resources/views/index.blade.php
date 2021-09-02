@@ -1,7 +1,7 @@
 @extends('design')
 
 @section('content')
-</br>
+</br></br>
 <div style='border:white; border-style:groove; border-width:8px'>
 
     <div class="row" style='background-color:red' align="center">

@@ -65,9 +65,12 @@
                         </br>
 </div>
 
-    <div class="left" align="right" style='margin-bottom:10px; margin-left:10px; margin-right:10px'>
+    <div class="left" align="center" style='margin-bottom:10px; margin-left:10px; margin-right:10px'>
         <button type="submit" class="btn btn-primary" style='background-color:green; color:white'>Submit</button>
 </div>
+<div class="left" align="center" style='margin-bottom:10px; margin-left:10px; margin-right:10px'>
+        <a href="#" onclick="history.back(1);" style='background-color:green; color:white'>Back</a>
+        </div>
 </form>
 </div>
 

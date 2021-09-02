@@ -40,6 +40,7 @@
         <div class="left" align="center" style='margin-top:10px; margin-left:10px; margin-right:10px;'>
         <strong for="typeofdance" style='color:orange'>Type of Dance</strong></br>
                         <select name="typeofdance" id="typeofdance">
+                            <option selected hidden>{{ $danceclass->typeofdance }}</option>
                             <option value="Hip-Hop">Hip-Hop</option>
                             <option value="Urban Dance">Urban Dance</option>
                             <option value="Contemporary">Contemporary</option>
@@ -51,6 +52,7 @@
         <div class="left" align="center" style='margin-top:10px; margin-left:10px; margin-right:10px;'>
         <strong for="levelofdance" style='color:orange'>Level of Dance</strong></br>
                         <select name="levelofdance" id="levelofdance">
+                        <option selected hidden>{{ $danceclass->levelofdance }}</option>
                             <option value="Advance">Advance</option>
                             <option value="Average">Average</option>
                             <option value="Beginner">Beginner</option>
@@ -62,9 +64,15 @@
             <input class="form-control" name="contactnumber" value="{{ $danceclass->contactnumber }}" placeholder="ContactNumber">
             </br>
         </div>
-        <div class="left" align="right" style='margin-bottom:10px; margin-left:10px; margin-right:10px'>
+        <div class="left" align="center" style='margin-bottom:10px; margin-left:10px; margin-right:10px'>
             <button type="submit" class="btn btn-primary" style='background-color:yellow; color:black'>Update</button>
+          
+            
         </div>
+        <div class="left" align="center" style='margin-bottom:10px; margin-left:10px; margin-right:10px'>
+        <a href="#" onclick="history.back(1);" style='background-color:green; color:white'>Back</a>
+        </div>
+       
 </div>
 </form>
 </div>
